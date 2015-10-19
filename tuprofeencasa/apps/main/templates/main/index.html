@@ -1,0 +1,479 @@
+{% extends "base.html" %}
+{% block metas %}
+    <meta name="title" content="Tu profe en casa | Clases particulares">
+    <meta name="description" content="Somos una empresa Trujillana dedicada a brindar clases particulares a domicilio">
+    <meta name="keywords" content="Clases Particulares Trujillo, Clases particulares en Trujillo, Clases Particulares en la ciudad de Trujillo, Clases de matemática en Trujillo, Profesor particular Trujillo, Clases física Trujillo, Clases química Trujillo, Clases Particulares de matemática en Trujillo">
+{% endblock metas %}
+{% load static from staticfiles %}
+
+{% block content %}
+
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a> -->
+                <img src="{% static 'img/LOGO02.png' %}">
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#cabecera">inicio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#METODOLOGIA">METODOLOGIA</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#SERVICIOS">SERVICIOS</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#cliente_top">Clientes</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'teachers:workus' %}">ENSE&Ntilde;A CON NOSOTROS</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contacto">contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+<header id="cabecera">
+        <div class="container" style="    padding-left: 0px;  margin-right: 0px;  margin-left: 0px;">
+            <div class="intro-text">
+                    <div class="head_bloq">
+                        <img src="{% static 'img/LOGO02-blanco.png' %}" class="img-responsive">
+                        <div class="intro-lead-in"> Clases particulares a domicilio en Trujillo</div>
+                
+                    </div>
+            </div>
+        </div>
+    </header>
+    <!-- Seccion 'Nosotros' -->
+    <section id="nosotros">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <img src="{% static 'img/bloq1_img1.jpg' %}" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="panel panel-default">
+                    <div class="panel-heading">NOSOTROS</div>
+                      <div class="panel-body">
+                        <p style="    text-align: justify;">
+                            Tu profe en casa se formó como una iniciava de formalizar las clases parculares en la ciudad de Trujillo, y así poder transmir conﬁanza y tranquilidad a los padres de familia y alumnos al ofrecerles un servicio personalizado y de calidad.   Nos dedicamos a brindar clases parculares a alumnos tanto de etapa escolar como universitarios. Nuestro objevo es resolver problemas de aprendizaje, lograr que el estudiante mejore sus caliﬁcaciones pero a la vez proporcionarle herramientas para que pueda connuar su proceso educavo de forma autónoma e independiente.
+                            <div class="t1"></div>
+                        </p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin 'Nosotros' -->
+    <!-- Seccion 'NUESTROS VALORES' -->
+    <section id="nuestros-valores">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h3>NUESTROS VALORES:</h3>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    
+                    <!-- Columna 1 -->
+                    <div class="col-xs-12 col-sm-4 col-md-4 " style="padding-bottom: 0px;">
+                        <div>
+                            <div class="colum1">
+                                <div class="liston">
+                                    <h3>Integridad</h3>
+                                    <div class="t2"></div>
+                                </div>
+                                <p style="padding-left: 50px;padding-right: 50px; padding-bottom: 0px;">
+                                Actuar con total transparencia es importante para  construir y mantener la conﬁanza con  nuestros alumnos y sus padres.
+                                </p>
+                            </div>
+                            <div class="ribbon"><img src="{% static 'img/bloq2_colum_pie.jpg' %}" class="img-responsive"></div>
+                        </div>
+                    </div>
+                    <!-- Columna 2 -->
+                    <div class="col-xs-12 col-sm-4 col-md-4 " style="padding-bottom: 0px;">
+                        <div >
+                            <div class="colum1">
+                                <div class="liston">
+                                    <h3>Optimismo</h3>
+                                </div>
+                                <p style="padding-left: 50px;padding-right: 50px; padding-bottom: 0px;">
+                                El entusiasmo para nosotros es muy  importante   para lograr  un ambiente de  aprendizaje posivo y esmulante para los  estudiantes.
+                                </p>
+                                
+                            </div>
+                            <div class="ribbon"><img src="{% static 'img/bloq2_colum_pie.jpg' %}" class="img-responsive"></div>
+                        </div>
+                    </div>
+                    <!-- Columna 3 -->
+                    <div class="col-xs-12 col-sm-4 col-md-4 " style="padding-bottom: 0px;">
+                        <div >
+                            <div class="colum1">
+                                <div class="liston" style="padding: 7px 0;">
+                                    <h3>Vocaci&oacute;n para ense&ntilde;ar</h3>
+                                    <div class="t3"></div>
+                                </div>
+                                <p style="padding-left: 50px;padding-right: 50px; padding-bottom: 0px;">
+                                Nuestra pasión por enseñar es nuestro principal motor,  nos inspira a connuar mejorando, y alcanzar los objevos que nos trazamos con cada  estudiante.
+                                </p>
+                                
+                            </div>
+                            <div class="ribbon"><img src="{% static 'img/bloq2_colum_pie.jpg' %}" class="img-responsive"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin 'NUESTROS VALORES' -->
+    <!-- Seccion 'NUESTROS PROFESORES' -->
+    <section id="nuestros-profesores">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h3>NUESTROS PROFESORES</h3>
+                        <p>Todos nuestros profesores han pasado por un proceso de selección muletapas donde demuestran no solo su conocimiento en el curso de su especialidad, también su didácta, capacidad para comunicarse y habilidades pedagógicos.</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <div>
+                        <div class="liston1" >
+                            <h3 style="    padding: 5px;"> ¿Cómo seleccionamos a nuestros profesores?</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 ">
+                    <!-- Columna 1 -->
+                    <div class="col-xs-12 col-sm-3 col-md-3 " style="    padding: 0px;">
+                        <div >
+                            <div class="colum1">
+                                <div class="liston2">
+                                    <h3>Filtro Inicial</h3>
+                                    <div class="t4"></div>
+                                </div>
+                                <p >
+                                Los postulantes para enseñar en Tu profe en casa envían su curriculum, lo evaluamos a ﬁn de que cumpla con los requisitos de nuestro perﬁl.
+                                </p>
+                                <div class="ribbon"><img src="{% static 'img/bloq3_colum_pie.png' %}" class="img-responsive"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Columna 2 -->
+                    <div class="col-xs-12 col-sm-3 col-md-3 " style="    padding: 0px;">
+                        <div >
+                            <div class="colum1">
+                                <div class="liston2">
+                                    <h3>Entrevista</h3>
+                                </div>
+                                <p >
+                                La entrevista nos permirá conocer más a fondo al candidato, analizar si reúne las condiciones básicas para enseñar, tales como: compromiso, ética, honradez.
+                                </p>
+                                <div class="ribbon"><img src="{% static 'img/bloq3_colum_pie.png' %}" class="img-responsive"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Columna 3 -->
+                    <div class="col-xs-12 col-sm-3 col-md-3 " style="    padding: 0px;">
+                        <div >
+                            <div class="colum1">
+                                <div class="liston2">
+                                    <h3>Evaluación</h3>
+                                </div>
+                                <p >
+                                 Los postulantes desarrollan un examen de acuerdo al curso que deseen dictar a ﬁn de determinar su grado de dominio en la materia y un test psicológico.
+                                </p>
+                                <div class="ribbon"><img src="{% static 'img/bloq3_colum_pie.png' %}" class="img-responsive"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Columna 4 -->
+                   <div class="col-xs-12 col-sm-3 col-md-3 " style="    padding: 0px;">
+                        <div >
+                            <div class="colum1">
+                                <div class="liston2">
+                                    <h3>Clase Modelo</h3>
+                                    <div class="t5"></div>
+                                </div>
+                                <p >
+                                En la úlma etapa el candidato dicta una clase de su especialidad a ﬁn de que  podamos evaluar su didácca y las estrategias de enseñanza que uliza.
+                                </p>
+                                <div class="ribbon"><img src="{% static 'img/bloq3_colum_pie.png' %}" class="img-responsive"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin 'NUESTROS PROFESORES' -->
+    
+     <!-- Seccion 'METODOLOGÍA' -->
+    <section id="METODOLOGIA">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h3>METODOLOGÍA</h3>
+                        <p>A ﬁn de garanzar aprendizajes con resultados medibles, hemos dividido nuestro sistema de asesorías en 3 etapas.</p>
+                    </div>
+                </div>
+                <div class="row">
+                     <div class="hidden-xs hidden-sm col-md-3 " style="    z-index: 11;">
+                        <img src="{% static 'img/img1_bloq4.png' %}" >
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-9 " >
+                        <!-- Fila 1 -->
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-xs-12 col-sm-12 col-md-3 " >
+                                <div class="t1">
+                                    <h4>Diagnósco</h4>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-9 " >
+                                <div class="t2">
+                                    <p> Nuestro asesor educavo te visita para realizar un análisis de la situación académica del alumno, deﬁnir los objevos de aprendizaje y atender  cualquier consulta de los padres.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fila 2 -->
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-xs-12 col-sm-12 col-md-3 " >
+                                <div class="t1">
+                                    <h4>Tutoría</h4>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-9 " >
+                                <div class="t2" style="    padding: 0px;">
+                                    <p style="    padding: 1.1px;"> En base a la información recogida seleccionamos al profesor que se adecue más a tus necesidades y te lo enviamos siguiendo el horario programado y teniendo en cuenta los objetivos establecidos anteriormente.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fila 3 -->
+                        <div class="row" style="margin-top:10px;">
+                            <div class="col-xs-12 col-sm-12 col-md-3 " >
+                                <div class="t1">
+                                    <h4>Reportes</h4>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-9 " >
+                                <div class="t2">
+                                    <p>Periódicamente se te envía reportes a través de correo electrónico para mantenerte informado a ti y a tus padres sobre tu progreso.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- Fin 'METODOLOGIA' -->
+     <!-- Seccion 'SERVICIOS' -->
+    <section id="SERVICIOS">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h3>SERVICIOS</h3>
+                        <p>A ﬁn de garanzar aprendizajes con resultados medibles, hemos dividido nuestro sistema de asesorías en 3 etapas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <div class="col-xs-12 col-sm-6 col-md-6 ">
+                        <!-- Imagen Escolares-->
+                        <div class="img-content">
+                            <img src="{% static 'img/bloq5_img1.png' %}" style="max-width: 300px;" class="img-circle img-servicio">
+                            <a href="#." id="btn_escolares" style="margin-left: 34px;"><div class="btn_servicio">ESCOLARES</div></a>
+                        </div>
+                            <div id="Modal_universitario" style="top:0;display:none">
+                                <!-- panel explicativo del servicio universitario -->
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        Este servicio se ofrece para alumnos que se encuentran en pregrado de la universidad, para cursos de formación general. Se aenden temas  especíﬁcos de acuerdo a la necesidad de cada alumno. Las clases se dan en el lugar de tu preferencia. Se contratan las horas que se deseen a parr de 3 horas. El paquete de horas puede usarse para los cursos que deseen.
+                                        <br><br><br><br><br>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <ul>
+                                            <li> <strong>Clases parculares individuales:</strong></li>
+                                            <li>La asesoría es personalizada, en los cursos que desee.</li>
+                                        </ul>
+                                        <ul>
+                                            <li><strong>Precios:</strong></li>
+                                            <li>3 horas---- S/. 120</li>
+                                            <li>5 horas ----- S/ 200</li>
+                                            <li>10 horas -----S/. 380</li>
+                                        </ul>
+                                    </div>
+                                    <div class="panel-footer2">
+                                        <ul>
+                                            <li> <strong>Clases parculares grupales:</strong></li>
+                                            <li>Se realizan para pequeños grupos de  3 a 6 estudiantes, en el lugar de su preferencia.</li>
+                                        </ul>
+                                        <ul>
+                                            <li><strong>Precios:</strong></li>
+                                            <li>3 horas ..... S/ 250</li>
+                                            <li>5 horas ..... S/ 380</li>
+                                            <li>10 horas ....S/ 730</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Fin Panel universitario -->
+                            </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 ">
+                        <!-- imagen universitario -->
+                        <div class="img-content">
+                            <img src="{% static 'img/bloq5_img2.png' %}" style="max-width: 300px;" class="img-circle img-servicio">
+                            <a href="#." id="btn_universitario" ><div class="btn_servicio">UNIVERSITARIOS</div></a>
+                        </div>
+                        <div id="Modal_escolares" style="position: absolute;top:0;display:none">
+                            <!-- panel explicativo del servicio escolares -->
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    Las clases particulares están orientadas a atender las necesidades especíﬁcas de cada alumno, con horarios ﬂexibles.<br> El ﬁn de todo acompañamiento no es solo aprender un tema o curso, también es proporcionar herramientas para que el alumno pueda connuar su proceso educavo de forma autónoma e independiente.
+                                    <br>
+                                    <ul>
+                                        <li><strong>Caracteristicas:</strong></li>
+                                        <li>Las clases son en tu domicilio o lugar de tu preferencia</li>
+                                        <li>Se contratan paquetes de horas múlplos de 5</li>
+                                        <li>Horarios ﬂexibles</li>
+                                        <li>Puedes usar las horas en diferentes cursos</li>
+                                    </ul>
+                                </div>
+                                <div class="panel-footer">
+                                    <strong>
+                                        <ul>
+                                            <li>Precios:</li>
+                                            <li>5 horas -- S/. 180</li>
+                                            <li>10 horas S/. 330</li>
+                                            <li>15 horas S/. 450</li>
+                                        </ul>
+                                    </strong>
+                                </div>
+                            </div>
+                            <!-- Fin panel universitario -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- Fin 'SERVICIOS' -->
+
+     <!-- Seccion 'CLIENTES' -->
+     <section id="cliente_top"></section>
+    <section id="CLIENTES">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h3>Algunos de nuestros clientes</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="    margin-left: -80px;">
+                <!-- Logotipos de clientes -->
+                <div class="col-lg-1 col-xs-12 img-content"><img src="{% static 'img/cliente_logo1.jpg' %}" class="img-responsive"></div>
+                <div class="col-lg-1 col-xs-12 img-content"><img src="{% static 'img/cliente_logo2.jpg' %}" class="img-responsive"></div>
+                <div class="col-lg-1 col-xs-12 img-content"><img src="{% static 'img/cliente_logo3.jpg' %}" class="img-responsive"></div>
+                <div class="col-lg-1 col-xs-12 img-content"><img src="{% static 'img/cliente_logo4.jpg' %}" class="img-responsive"></div>
+                <div class="col-lg-1 col-xs-12 img-content"><img src="{% static 'img/cliente_logo5.jpg' %}" class="img-responsive"></div>
+                <div class="col-lg-1 col-xs-12 img-content"><img src="{% static 'img/cliente_logo6.jpg' %}" class="img-responsive"></div>
+                <div class="col-lg-1 col-xs-12 img-content"><img src="{% static 'img/cliente_logo7.jpg' %}" class="img-responsive"></div>
+            </div>
+        </div>
+    </section>
+    <section id="cliente_bottom"></section>
+    <!-- Fin 'CLIENTES' -->
+    
+    <!-- Seccion 'contacto' -->
+    <section id="contacto">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="section-title">
+                        <div class="title"><h3 style="    margin-top: 0px;">¿TIENES ALGUNA PREGUNTA?</h3></div>
+                        <p> Nos encanta resolver dudas, por favor, completa el siguiente formulario o escríbenos al correo electrónico y nos contactaremos contigo lo más pronto posible.</p>
+                        <h4 style="    text-transform: none;">hola@tuprofeencasa.pe</h4>
+                        <h4>Tel.: (044) 253288</h4>
+                        <h4>Cel.: 996244889</h4>
+                    </div>
+                </div>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="form-group">
+                            <b>{{ message }}</b>
+                        </div>
+                        <div class="form-group">
+                            {{ form.full_name }}
+                            {{ form.full_name.errors }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.email }}
+                            {{ form.email.errors }}
+                        </div>
+                        <div class="form-group">
+                            {{ form.phone }}
+                            {{ form.phone.errors }}
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="form-group" style="    text-align: left;">
+                            {{ form.message }}
+                            {{ form.message.errors }}
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+<!-- Fin 'cntacto' -->
+    <section id="mapa">
+    <div class="overlay" onClick="style.pointerEvents='none'"></div>
+        <div class="rombo"><img src="{% static 'img/contact_map_img.png' %}" style="max-width: 127px;"></div>
+        <div>
+        <iframe scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.0801031751853!2d-79.03896910902355!3d-8.093313820590081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3deb41def495%3A0x33393748db3b2da5!2sFederico+Gerdes+273%2C+Trujillo+13001!5e0!3m2!1ses-419!2spe!4v1444932513883"  width="100%" height="510" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    </section>
+    
+{% endblock content %}
+
+
+    

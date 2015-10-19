@@ -1,0 +1,5 @@
+tuprofeencasa/apps/users/migrations/*
+tuprofeencasa/apps/main/migrations/*
+tuprofeencasa/apps/teachers/migrations/*
+tuprofeencasa/media/*
+*.pyc

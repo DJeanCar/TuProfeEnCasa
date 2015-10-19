@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% block metas %}
+    <meta name="title" content="Tu profe en casa | Trabaja con nosotros">
+    <meta name="description" content="Si tienes vocación para enseñar y quieres dar clases a domicilio esta es tu oportunidad">
+    <meta name="keywords" content="Clases Particulares Trujillo, Clases particulares en Trujillo, Clases Particulares en la ciudad de Trujillo, Clases de matemática en Trujillo, Profesor particular Trujillo, Clases física Trujillo, Clases química Trujillo, Clases Particulares de matemática en Trujillo">
+{% endblock metas %}
+
+{% load static from staticfiles %}
+
+{% block content %}
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a> -->
+                <img src="{% static 'img/LOGO02.png' %}">
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="/#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'main:home' %}#cabecera">inicio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'main:home' %}#nosotros">Nosotros</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'main:home' %}#METODOLOGIA">METODOLOGIA</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'main:home' %}#SERVICIOS">SERVICIOS</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'main:home' %}#cliente_top">Clientes</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'teachers:workus' %}">ENSE&Ntilde;A CON NOSOTROS</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'main:home' %}#contacto">contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+ <!-- Seccion 'con nosotros' -->
+     <section id="con_nosotros">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-3" style="z-index:11;    margin-bottom: -20px;">
+                    <div class="section-title">
+                        <div class="title"><h3>¿Te gustaría ense&ntilde;ar con nosotros?</h3></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <img src="{% static 'img/bloq6_img1.png' %}" class="img-circle img-responsive">
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-8">
+                        <div class="panel panel-default">
+                          <div class="panel-body">
+                            ¿Eres profesor o estudiante universitario con gran vocación por enseñar? Estamos en busca de talentos! si quieres dar clases particulares a domicilio y en horarios flexibles esta es tu oportunidad!.
+                            <h4 style="color:#fff">¿Qué te ofrecemos?</h4>
+                            <p><strong>Alumnos:</strong> De acuerdo a tu desempeño se te asignan cada vez más alumnos.</p>
+                            <p><strong>Capacitaciones:</strong> Te asesoramos en estrategias pedagógicas.</p>
+                            <p><strong>Horarios Flexibles:</strong> Te asignamos estudiantes de acuerdo a tu horario de disponibilidad. </p>
+                            <p><strong>Ascensos:</strong> tu remuneración puede incrementarse de acuerdo a tu rendimiento.</p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin 'con nosotros' -->
+
+    <!-- Seccion2 'con nosotros' -->
+    <section id="con_nosotros2">
+        <div class="container">
+           
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="section-title" style="margin-top:-60px;">
+                            <h2>¿Por qué trabajar con nosotros?</h2>
+                        
+                            <!-- <p><strong>¿Te gusta trabajar con niños?</strong></p> -->
+                            <p><strong>¿Estás buscando una gratificante carrera independiente ?</strong></p>
+                            <p>Conviértete en un tutor de <strong>Tu Profe en Casa</strong> </p>
+                            <p><strong>Buscamos personas con:</strong></p>
+                            <ul>
+                                <li>Vocación para ense&ntilde;ar</li>
+                                <li>Formación pedagógica (deseable)</li>
+                                <li>Gran nivel de compromiso y honestidad</li>
+                            </ul>
+                            <p>Si esto es para ti, completa el siguiente formulario:</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="panel panel-default">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="panel-body">
+                                <b>{{ message }}</b>
+                            </div>
+                           
+                          <div class="panel-body">
+                            <div class="form-group">
+                                {{ form.first_name }}
+                                {{ form.first_name.errors }}
+                            </div>
+                            <div class="form-group">
+                                {{ form.last_name }}
+                                {{ form.last_name.errors }} 
+                            </div>
+                            <div class="form-group">
+                                {{ form.dni }}
+                                {{ form.dni.errors }}
+                            </div>
+                            <div class="form-group">
+                                {{ form.age }}
+                                {{ form.age.errors }}
+                            </div>
+                            <div class="form-group">
+                            <label>Ocupación</label>
+                                {{ form.occupation }}
+                                {{ form.occupation.errors }}
+                            </div>
+                            {{ form.disponibilidad_horaria }}
+                            {{ form.disponibilidad_horaria.errors }}
+                            
+                            {{ form.trabajar_con_nosotros }}
+                            {{ form.trabajar_con_nosotros.errors }}
+                            
+                                <div class="form-group">
+                            <label>Adjunta tu Curriculum*</label>
+                               {{ form.cv }}
+                               {{ form.cv.errors }}
+                            </div>
+                                <div class="col-lg-4">
+                                    <button type="submit" class="btn btn-primary">Enviar</button>
+                                <div>
+                          </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin 'con nosotros2' -->
+
+{% endblock content %}
